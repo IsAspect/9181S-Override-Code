@@ -7,10 +7,12 @@ extern brain Brain;
 
 //Add your devices below, and don't forget to do the same in robot-config.cpp:
 
+// Drivetrain Motors
 extern motor leftFront;
 extern motor leftBack;
 extern motor rightFront;
 extern motor rightBack;
+extern motor lift;
 
 
 void  vexcodeInit( void );
