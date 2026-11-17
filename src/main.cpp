@@ -50,7 +50,7 @@ motor_group(LeftFront, LeftBack),
 motor_group(RightFront, RightBack),
 
 //Specify the PORT NUMBER of your inertial sensor, in PORT format (i.e. "PORT1", not simply "1"):
-PORT1, // change this later
+PORT5, // change this later
 
 //Input your wheel diameter. (4" omnis are actually closer to 4.125"):
 2.75,
@@ -219,10 +219,8 @@ void usercontrol(void) {
     // This is the main execution loop for the user control program.
     // Each time through the loop your program should update motor + servo
     // values based on feedback from the joysticks.
-    if (Controller.Axis3.position() >= 10 ) {
-
-      LeftFront.
-
+    
+    
     }
 
 
@@ -238,7 +236,7 @@ void usercontrol(void) {
     wait(20, msec); // Sleep the task for a short amount of time to
                     // prevent wasted resources.
   }
-}
+
 
 //
 // Main will set up the competition functions and callbacks.
