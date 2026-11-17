@@ -12,6 +12,13 @@ brain  Brain;
 
 //Add your devices below, and don't forget to do the same in robot-config.h:
 
+// Drivetrain motors
+motor leftFront = motor(PORT1, ratio6_1, false);
+motor leftBack = motor(PORT2, ratio6_1, true);
+motor rightFront = motor(PORT3, ratio6_1, false);
+motor rightBack = motor(PORT4, ratio6_1, true);
+
+// Add other subsystem's motors here
 
 void vexcodeInit( void ) {
   // nothing to initialize
