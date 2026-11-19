@@ -217,22 +217,40 @@ void usercontrol(void) {
 
 
   while (1) {
-    // This is the main execution loop for the user control program.
-    // Each time through the loop your program should update motor + servo
-    // values based on feedback from the joysticks.
-    if (Controller1.ButtonR2.pressing() = true) {
+    // lift control
+    if (Controller1.ButtonR2.pressing()) {
 
       lift.spin(forward);
       
-      if (Controller1.ButtonR2.pressing() = false) {
+      if (Controller1.ButtonR2.pressing() == false) {
 
         lift.stop(hold);
 
       }
-    else if () {
+    else if (Controller1.ButtonR1.pressing()) {
+      
+      lift.spin(reverse);
     
+    }
+
+    // locks out the lift if the driver tries to drive the lift into the ground
+    // change the value later idk what it's gonna be
+    else if (lift.position(degrees) == 360) {
+    
+      lift.stop(brake);
+      
+    }
 
     }
+    
+    // Controller deadzone in case of stick drift
+    if (Controller1.Axis3.Position() <= 10 and >= -10) {
+      
+      leftFront.stop(brake);
+      leftBack.stop(brake);
+      rightBack.stop(brake);
+      rightFront.stop(brake);
+  
     }
     
     }
@@ -251,7 +269,7 @@ void usercontrol(void) {
 
     wait(20, msec); // Sleep the task for a short amount of time to
                     // prevent wasted resources.
-  }
+  
 
 
 //
