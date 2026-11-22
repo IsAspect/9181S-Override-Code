@@ -229,17 +229,11 @@ void usercontrol(void) {
         lift.stop(hold);
 
       }
-    else if (Controller1.ButtonR1.pressing()) {
+    else if (Controller1.ButtonL2.pressing()) {
       
       lift.spin(reverse);
     
     }
-
-    // locks out the lift if the driver tries to drive the lift into the ground
-    // change the value later idk what it's gonna be
-    else if (lift.position(degrees) == 360) {
-    
-      lift.stop(brake);
       
     }
 
