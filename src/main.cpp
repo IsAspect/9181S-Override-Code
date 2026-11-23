@@ -224,7 +224,7 @@ void usercontrol(void) {
 
       lift.spin(forward);
       
-      if (Controller1.ButtonR2.pressing() == false) {
+    if (Controller1.ButtonR2.pressing() == false) {
 
         lift.stop(hold);
 
@@ -248,10 +248,17 @@ void usercontrol(void) {
       rightFront.stop(brake);
   
     }
-    
+
+    if (Controller1.Axis3.Position() <= 10 and >= -10) {
+      leftFront.stop(brake);
+      leftBack.stop(brake);
+      rightBack.stop(brake);
+      rightFront.stop(brake);
+
     }
     
     }
+    
 
 
     // ........................................................................
