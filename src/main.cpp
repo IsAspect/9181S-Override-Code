@@ -231,10 +231,23 @@ void usercontrol(void) {
     }  
     else {
 
-        lift.stop(hold);
+      lift.stop(hold);
 
     }
-    
+
+    if (Controller1.Axis3.position() < 10 and Controller1.Axis3.position() > -10) {
+      leftFront.stop(brake);
+      leftBack.stop(brake);
+      rightFront.stop(brake);
+      rightBack.stop(brake);
+
+    }
+
+    if (Controller1.Axis1.position() < 10 and Controller1.Axis1.position() > -10)
+      leftFront.stop(brake);
+      leftBack.stop(brake);
+      rightFront.stop(brake);
+      rightBack.stop(brake);
     }
 
     }
