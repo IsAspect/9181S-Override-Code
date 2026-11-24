@@ -223,41 +223,24 @@ void usercontrol(void) {
     if (Controller1.ButtonR2.pressing()) {
 
       lift.spin(forward);
-      
-    if (Controller1.ButtonR2.pressing() == false) {
-
-        lift.stop(hold);
-
-      }
+    }
     else if (Controller1.ButtonL2.pressing()) {
       
       lift.spin(reverse);
     
-    }
-      
-    }
+    }  
+    else {
 
-    }
-    
-    // Controller deadzone in case of stick drift
-    if (Controller1.Axis3.Position() <= 10 and >= -10) {
-      
-      leftFront.stop(brake);
-      leftBack.stop(brake);
-      rightBack.stop(brake);
-      rightFront.stop(brake);
-  
-    }
-
-    if (Controller1.Axis3.Position() <= 10 and >= -10) {
-      leftFront.stop(brake);
-      leftBack.stop(brake);
-      rightBack.stop(brake);
-      rightFront.stop(brake);
+        lift.stop(hold);
 
     }
     
     }
+
+    }
+    
+    
+    
     
 
 
