@@ -18,10 +18,13 @@ motor leftBack = motor(PORT2, ratio6_1, true);
 motor rightFront = motor(PORT3, ratio6_1, false);
 motor rightBack = motor(PORT4, ratio6_1, true);
 
-// Add other subsystem's motors here
+// Lift motor
 
 motor lift = motor(PORT5, ratio36_1, false);
 
+// Controller
+
+controller Controller1 = controller();
 
 void vexcodeInit( void ) {
   // nothing to initialize
